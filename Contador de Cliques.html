@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques com Botão de reset</title>
+</head>
+CONTADOR DE CLIQUES REAVALIAÇÃO
+<body>
+<h1> </h1>
+    <button onclick="ContarCliques()"  >Clique aqui para começar sua contagem</button>
+    <h1></h1>
+    <button onclick="ResetarContagem()" >Resete sua Contagem clicando aqui</button>
+    <div id="contador">Cliques: 0</div><br>
+</body>
+<script>
+    let cliques = 0;
+    function ContarCliques() {
+    cliques++;
+    document.getElementById("contador").textContent = "Cliques: " + cliques;
+}
+    function ResetarContagem() {
+    cliques= 0;
+    document.getElementById("contador").textContent = "Cliques: 0";
+    }
+</script>
+</html>
