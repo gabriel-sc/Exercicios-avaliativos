@@ -1,0 +1,40 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Saudações personalizada com Horário</title>
+</head>
+<h1>Clique no botão para receber sua SAUDAÇÃO meu jovem PADAWAN</h1>
+
+<body>
+
+    <button onclick="Saudacoes()">Aqui PADAWAN</button>
+    <h1 id="mensagem" style="display: none;"></h1>
+<!-- Botao ira chamar a funcao saudacoes -->
+    <script>
+        // Criar duas const para atribuir a função Saudacoes
+        function Saudacoes() {
+            const agora = new Date();
+            // new date para receber data e hora do computador
+            const hora = agora.getHours();
+            let saudacao;
+            // uso do switch para ele processar mais rapido o dado assim nao precisando ler todo o codigo caso encontre oque é TRUE
+            switch (true) {
+                case (hora <= 12):
+            saudacao = "Bom dia";
+            break;
+                case (hora <= 18):
+            saudacao = "Boa tarde";
+            break;
+            default:
+            saudacao = "Boa noite";
+}
+            const dataHora = agora.toLocaleString('pt-BR');
+            const mensagem = saudacao + " Agora são exatamente " + dataHora + " ! ";
+
+            document.getElementById("mensagem").textContent = mensagem;
+            document.getElementById("mensagem").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
