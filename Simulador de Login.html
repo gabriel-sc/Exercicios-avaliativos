@@ -1,0 +1,38 @@
+
+<!-- Como fazer um verificador  se o email e senha  esta correto 
+div em html para exibir resultados se for colocado conteudo no usuario e senha -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Tente seu Login</title>
+<script>
+function validarLogin(event) {
+event.preventDefault();
+
+const usuario = document.getElementById("usuario").value;
+const senha = document.getElementById("senha").value;
+
+switch (true) {
+case (usuario === "Gabriel123" && senha === "Schio123"):
+alert("Login ok! Congratulations?");
+window.location.href = "pagina-restrita.html";
+break;
+default:
+alert("Eita Você errou! > Tente seguir o padrao <");
+}
+}
+</script>
+</head>
+<body>
+<h2>Login</h2>
+<form onsubmit="validarLogin(event)">
+<label for="usuario">Usuário:</label>
+<input type="text" id="usuario" required>
+
+<label for="senha">Senha:</label>
+<input type="password" id="senha" required>
+
+<button type="submit">Entrar</button>
+</body>
+</html>
